@@ -147,6 +147,9 @@
         .result {
             margin-top: 250px;
         }
+        .main__bg_cases img {
+            margin-top: 150px;
+        }
 
 }
 @media (max-width: 992px) {

@@ -1,3 +1,7 @@
+
+
+
+
 // СТРЕЛОЧКИ НА КНОПКЕ СУЖАЮТСЯ
 
 const blackBtn = document.querySelector(
@@ -675,6 +679,9 @@ stars.forEach((item,idx)=>{
 })
 
 //ЭФЕКТ ПЕЧАТНОЙ МАШИНКИ
+let spanElement = document.createElement('span');
+spanElement.textContent = ' |';
+spanElement.classList.add('my-class');
 
 const textsPrint = document.querySelector('.text__right_first');
 const textsPrintSecond = document.querySelector('.text__right_second');
@@ -692,11 +699,13 @@ function print(textPrint, textPrintSecond) {
   const addPrint = () => {
     let interval = setInterval(() => {
       newText += text[count];
-      textPrint.textContent = newText;
+      textPrint.innerHTML = newText;
+      textPrint.appendChild(spanElement);
       count++;
 
       if (count === text.length) {
         clearInterval(interval);
+       
         setTimeout(() => {
           removePrint();
         }, 1500);
@@ -707,11 +716,13 @@ function print(textPrint, textPrintSecond) {
   const addPrintSecond = () => {
     let interval = setInterval(() => {
       newText += textSecond[count];
-      textPrint.textContent = newText;
+      textPrint.innerHTML = newText;
+      textPrint.appendChild(spanElement);
       count++;
 
       if (count === textSecond.length) {
         clearInterval(interval);
+     
         setTimeout(() => {
           removePrintSecond();
         }, 1500);
@@ -723,10 +734,12 @@ function print(textPrint, textPrintSecond) {
     let interval = setInterval(() => {
       if (newText.length) {
         newText = newText.slice(0, -1);
-        textPrint.textContent = newText;
+        textPrint.innerHTML = newText;
+      textPrint.appendChild(spanElement);
         count--;
       } else {
         clearInterval(interval);
+        
         setTimeout(() => {
           addPrintSecond();
         }, 1500);
@@ -738,10 +751,12 @@ function print(textPrint, textPrintSecond) {
     let interval = setInterval(() => {
       if (newText.length) {
         newText = newText.slice(0, -1);
-        textPrint.textContent = newText;
+        textPrint.innerHTML = newText;
+      textPrint.appendChild(spanElement);
         count--;
       } else {
         clearInterval(interval);
+       
         setTimeout(() => {
           addPrint();
         }, 1500);

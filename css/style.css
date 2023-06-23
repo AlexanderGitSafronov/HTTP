@@ -8,6 +8,7 @@
 body{
     background-color: #000000;
     cursor: url('../images/cursor.svg'), auto;
+    scroll-behavior: smooth;
 }
 h3 {
     font-size: 64px;
@@ -116,8 +117,9 @@ a{
     min-height: 445px;
     position: absolute;
     top: 200px;
-   
 }
+
+
 .text__left, .text__right {
     min-width: 630px;
 }
@@ -205,25 +207,25 @@ a{
     position: absolute;
     top: 0;
     left: 0;
-    transition: 0.5s all ease-in-out;
+    transition: 0.2s all ease-in-out;
 }
 .black__block_btn img:nth-child(2) {
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: 0.5s all ease-in-out;
+    transition: 0.2s all ease-in-out;
 }
 .black__block_btn img:nth-child(3) {
     position: absolute;
     top: 0;
     right: 0;
-    transition: 0.5s all ease-in-out;
+    transition: 0.2s all ease-in-out;
 }
 .black__block_btn img:nth-child(4) {
     position: absolute;
     bottom: 0;
     right: 0;
-    transition: 0.5s all ease-in-out;
+    transition: 0.2s all ease-in-out;
 }
 
 
@@ -328,6 +330,13 @@ a{
     column-gap: 50px;
     overflow-x: scroll;
     padding: 0px 300px;
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+
+}
+.carousel::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 /*ПРИНЦЫПЫ РАБОТЫ */
@@ -864,7 +873,13 @@ a{
     column-gap: 20px;
     overflow-x: scroll;
     padding: 0px 180px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+.marketing__carusel::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+} 
 .marketing__carusel_block {
     min-width: 312px;
   
@@ -1125,3 +1140,16 @@ a{
         top: -100px;
     }
 }
+
+
+.my-class {
+    animation: cursor-blink 0.8s infinite;
+}
+@keyframes cursor-blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
