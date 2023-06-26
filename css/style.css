@@ -171,14 +171,16 @@ a{
 }
 
 /* СЕКЦИЯ С УЗКИМ ЧЕРНЫМ БЛОКОМ */
-
+.black__block_section{
+    margin-top: 650px;
+}
 .black__block {
     padding: 24px 36px;
     background-color: #000000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 650px;
+  
 }
 .header__button_text {
     width: 45%;
@@ -1124,7 +1126,7 @@ a{
      position: absolute;
      top: -100px;
     left: 50%;
-    animation: arrowFooter 8s ease-in-out infinite;
+    animation: arrowFooter 12s ease-in-out infinite;
 }
 .footer__top_content .footer__arrow img{
     width: 70%;
@@ -1153,3 +1155,115 @@ a{
       opacity: 0;
     }
   }
+
+
+
+
+  .header__right_mobil {
+      display: none;
+  }
+  .header__right_mobil button{
+    position: relative;
+    height: 2px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: none;
+  }
+  .header__right_mobil button::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 2px;
+  }
+  .header__right_mobil button::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.main__rooster_mb {
+    display: none;
+}
+.menu_mobil {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 20;
+    transition: 0.2s all ease-in-out;
+}
+.menu_mobil.active{
+    right: 0;
+}
+.header__right_mobil_open button{
+    background-color: #FF445E;
+}
+.header__right_mobil_open button::before{
+    background-color: #FF445E;
+    left: -6px;
+}
+.header__right_mobil_open button::after{
+    background-color: #FF445E;
+    left: 6px;
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 64px;
+font-family: Roboto Flex;
+font-weight: 500;
+line-height: 120%;
+text-transform: uppercase;
+margin-right: 98px;
+margin-top: 14vh;
+}
+.nav ul li {
+    list-style: none;
+    margin-bottom: 36px;
+}
+header {
+    position: relative;
+    z-index: 10;
+}
+.nav .menu__arrow {
+   text-align: right;
+   padding-right: 20px;
+ 
+}
+.nav .menu__arrow img{
+    width: 40%;
+    animation:  cursor-menu 12s ease-in-out infinite;
+}
+
+@keyframes cursor-menu {
+    0%, 100% {
+      margin-top: 0px;
+    }
+    50% {
+     margin-top: 100%;
+    }
+  }
+  .wrapper.active{
+      height: 100vh;
+      overflow:hidden;
+  }
+
+.top__price_left .center__price{
+    display: none;
+}
+.footer__link_media div{
+    display: flex;
+    column-gap: 24px;
+}

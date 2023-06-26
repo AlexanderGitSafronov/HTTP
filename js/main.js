@@ -1,7 +1,6 @@
 
 
 
-
 // СТРЕЛОЧКИ НА КНОПКЕ СУЖАЮТСЯ
 
 const blackBtn = document.querySelector(
@@ -240,29 +239,95 @@ function rightSwipe() {
       rightActivImg.style.transform = "rotate(" + 180 + "deg)";
       progresBar.style.width = "100%";
     }
-  }
-  if (window.innerWidth <= 740) {
+  } else if (window.innerWidth <= 992 && window.innerWidth >= 768) {
     if (offset === 0) {
-      offset += -300;
+      offset += -664;
+
       sliderContainer.style.marginLeft = offset + "px";
-    } else if (offset === -300) {
-      offset += -300;
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 1) {
+          item.classList.add("active__slide");
+        }
+      });
+      leftActivImg.src = "./images/arrow_right.svg";
+      leftActivImg.style.transform = "rotate(" + 180 + "deg)";
+      progresBar.style.width = "50%";
+    } else if (offset === -664) {
+      offset += -664;
       sliderContainer.style.marginLeft = offset + "px";
-    } else if (offset === -600) {
-      offset += -300;
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 2) {
+          item.classList.add("active__slide");
+        }
+      });
+      progresBar.style.width = "75%";
+      leftActivImg.src = "./images/arrow_right.svg";
+      leftActivImg.style.transform = "rotate(" + 180 + "deg)";
+    } else if (offset === -1328) {
+      offset += -664;
       sliderContainer.style.marginLeft = offset + "px";
-    } else if (offset === -900) {
-      offset += -300;
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 3) {
+          item.classList.add("active__slide");
+        }
+      });
+      rightActivImg.src = "./images/arrow_left.svg";
+      rightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      progresBar.style.width = "100%";
+    }
+  }else if (window.innerWidth <= 576) {
+    if (offset === 0) {
+      offset += -335;
+
       sliderContainer.style.marginLeft = offset + "px";
-    } else if (offset === -1200) {
-      offset += -300;
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 1) {
+          item.classList.add("active__slide");
+        }
+      });
+      leftActivImg.src = "./images/arrow_right.svg";
+      leftActivImg.style.transform = "rotate(" + 180 + "deg)";
+      progresBar.style.width = "50%";
+    } else if (offset === -335) {
+      offset += -335;
       sliderContainer.style.marginLeft = offset + "px";
-    } else if (offset === -1500) {
-      offset += -300;
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 2) {
+          item.classList.add("active__slide");
+        }
+      });
+      progresBar.style.width = "75%";
+      leftActivImg.src = "./images/arrow_right.svg";
+      leftActivImg.style.transform = "rotate(" + 180 + "deg)";
+    } else if (offset === -670) {
+      offset += -335;
       sliderContainer.style.marginLeft = offset + "px";
-    } else if (offset === -1800) {
-      offset += -300;
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 3) {
+          item.classList.add("active__slide");
+        }
+      });
+      rightActivImg.src = "./images/arrow_left.svg";
+      rightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      progresBar.style.width = "100%";
+    } else if (offset === -1005) {
+      offset += -335;
       sliderContainer.style.marginLeft = offset + "px";
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 3) {
+          item.classList.add("active__slide");
+        }
+      });
+      rightActivImg.src = "./images/arrow_left.svg";
+      rightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      progresBar.style.width = "100%";
     }
   }
 }
@@ -406,6 +471,98 @@ function leftSwipe() {
       }
       sliderContainer.style.marginLeft = offset + "px";
     }
+  }else if (window.innerWidth <= 992 && window.innerWidth >= 768) {
+    if (offset !== 0) {
+      offset += 664;
+    
+      if (offset === 0) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 0) {
+            item.classList.add("active__slide");
+          }
+        });
+        leftActivImg.src = "./images/arrow_left.svg";
+        leftActivImg.style.transform = "rotate(" + 360 + "deg)";
+        progresBar.style.width = "25%";
+      }
+      if (offset === -664) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 1) {
+            item.classList.add("active__slide");
+          }
+        });
+        progresBar.style.width = "50%";
+      }
+      if (offset === -1328) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 2) {
+            item.classList.add("active__slide");
+          }
+        });
+        rightActivImg.src = "./images/arrow_right.svg";
+        rightActivImg.style.transform = "rotate(" + 360 + "deg)";
+        progresBar.style.width = "75%";
+      }
+      if (offset === -1972) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 3) {
+            item.classList.add("active__slide");
+          }
+        });
+        progresBar.style.width = "100%";
+      }
+      sliderContainer.style.marginLeft = offset + "px";
+    }
+  }else if (window.innerWidth <= 576) {
+    if (offset !== 0) {
+      offset += 335;
+    
+      if (offset === 0) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 0) {
+            item.classList.add("active__slide");
+          }
+        });
+        leftActivImg.src = "./images/arrow_left.svg";
+        leftActivImg.style.transform = "rotate(" + 360 + "deg)";
+        progresBar.style.width = "25%";
+      }
+      if (offset === -335) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 1) {
+            item.classList.add("active__slide");
+          }
+        });
+        progresBar.style.width = "50%";
+      }
+      if (offset === -670) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 2) {
+            item.classList.add("active__slide");
+          }
+        });
+        rightActivImg.src = "./images/arrow_right.svg";
+        rightActivImg.style.transform = "rotate(" + 360 + "deg)";
+        progresBar.style.width = "75%";
+      }
+      if (offset === -1005) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 3) {
+            item.classList.add("active__slide");
+          }
+        });
+        progresBar.style.width = "100%";
+      }
+      sliderContainer.style.marginLeft = offset + "px";
+    }
   }
 }
 
@@ -480,6 +637,7 @@ teamRightBtn.addEventListener("click", () => {
 
 
   function teamRightSwipe() {
+    teamProgresBar.style.width = "33%";
     if (window.innerWidth > 1400) {
       if (teamOffset === 0) {
         teamOffset += -664;
@@ -531,43 +689,109 @@ teamRightBtn.addEventListener("click", () => {
         teamRightActivImg.src = "./images/arrow_left.svg";
         teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
       } 
-    }
-    if (window.innerWidth <= 980 && window.innerWidth > 740) {
+    } else if (window.innerWidth <= 992 && window.innerWidth >= 768) {
       if (teamOffset === 0) {
-        teamOffset += -600;
+        teamProgresBar.style.width = "25%";
+        teamOffset += -664;
+       
         teamSliderContainer.style.marginLeft = teamOffset + "px";
-      } else if (offset === -600) {
-        teamOffset += -600;
+        
+        teamLeftActivImg.src = "./images/arrow_right.svg";
+        teamLeftActivImg.style.transform = "rotate(" + 180 + "deg)";
+        teamProgresBar.style.width = "50%";
+      } else if (teamOffset === -664) {
+        teamOffset += -664;
         teamSliderContainer.style.marginLeft = teamOffset + "px";
-      } else if (offset === -1200) {
-        teamOffset += -600;
+       
+        teamProgresBar.style.width = "75%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } else if (teamOffset === -1328) {
+        teamOffset += -664;
         teamSliderContainer.style.marginLeft = teamOffset + "px";
-      }
-    }
-    if (window.innerWidth <= 740) {
+       
+        teamProgresBar.style.width = "100%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } 
+    }else if (window.innerWidth <= 576) {
+      teamProgresBar.style.width = "10%";
       if (teamOffset === 0) {
-        teamOffset += -300;
+       
+        teamOffset += -215;
+       
         teamSliderContainer.style.marginLeft = teamOffset + "px";
-      } else if (teamOffset === -300) {
-        teamOffset += -300;
+        
+        teamLeftActivImg.src = "./images/arrow_right.svg";
+        teamLeftActivImg.style.transform = "rotate(" + 180 + "deg)";
+        teamProgresBar.style.width = "20%";
+      } else if (teamOffset === -215) {
+        teamOffset += -215;
         teamSliderContainer.style.marginLeft = teamOffset + "px";
-      } else if (teamOffset === -600) {
-        teamOffset += -300;
+       
+        teamProgresBar.style.width = "30%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } else if (teamOffset === -430) {
+        teamOffset += -215;
         teamSliderContainer.style.marginLeft = teamOffset + "px";
-      } else if (offset === -900) {
-        teamOffset += -300;
+       
+        teamProgresBar.style.width = "40%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } else if (teamOffset === -645) {
+        teamOffset += -215;
         teamSliderContainer.style.marginLeft = teamOffset + "px";
-      } else if (offset === -1200) {
-        teamOffset += -300;
+       
+        teamProgresBar.style.width = "50%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } else if (teamOffset === -860) {
+        teamOffset += -215;
         teamSliderContainer.style.marginLeft = teamOffset + "px";
-      } else if (offset === -1500) {
-        teamOffset += -300;
+       
+        teamProgresBar.style.width = "60%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } else if (teamOffset === -1075) {
+        teamOffset += -215;
         teamSliderContainer.style.marginLeft = teamOffset + "px";
-      } else if (offset === -1800) {
-        teamOffset += -300;
+       
+        teamProgresBar.style.width = "70%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } else if (teamOffset === -1290) {
+        teamOffset += -215;
         teamSliderContainer.style.marginLeft = teamOffset + "px";
-      }
+       
+        teamProgresBar.style.width = "80%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } else if (teamOffset === -1505) {
+        teamOffset += -215;
+        teamSliderContainer.style.marginLeft = teamOffset + "px";
+       
+        teamProgresBar.style.width = "90%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } else if (teamOffset === -1720) {
+        teamOffset += -215;
+        teamSliderContainer.style.marginLeft = teamOffset + "px";
+       
+        teamProgresBar.style.width = "100%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } else if (teamOffset === -1935) {
+        teamOffset += -215;
+        teamSliderContainer.style.marginLeft = teamOffset + "px";
+       
+        teamProgresBar.style.width = "100%";
+        teamRightActivImg.src = "./images/arrow_left.svg";
+        teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      } 
     }
+    
+    
   }
 
 
@@ -580,8 +804,9 @@ teamRightBtn.addEventListener("click", () => {
 
 
 
-  teamProgresBar.style.width = "33%";
+
   function teamLeftSwipe() {
+    teamProgresBar.style.width = "33%";
     if (window.innerWidth > 1400) {
       if (teamOffset !== 0) {
         teamOffset += 664;
@@ -648,6 +873,76 @@ teamRightBtn.addEventListener("click", () => {
             teamRightActivImg.style.transform = "rotate(" + 360 + "deg)";
           teamProgresBar.style.width = "100%";
         }
+       
+        teamSliderContainer.style.marginLeft = teamOffset + "px";
+      }
+    }else if (window.innerWidth <= 992 && window.innerWidth >= 768) {
+      if (teamOffset !== 0) {
+        teamOffset += 664;
+      
+        if (teamOffset === 0) {
+         
+            teamLeftActivImg.src = "./images/arrow_left.svg";
+            teamLeftActivImg.style.transform = "rotate(" + 360 + "deg)";
+          teamProgresBar.style.width = "25%";
+        }
+        if (teamOffset === -664) {
+         
+            teamProgresBar.style.width = "50%";
+        }
+        if (teamOffset === -1328) {
+         
+            teamRightActivImg.src = "./images/arrow_left.svg";
+            teamRightActivImg.style.transform = "rotate(" + 360 + "deg)";
+          teamProgresBar.style.width = "75%";
+        }
+        if (teamOffset === -1992) {
+         
+          teamRightActivImg.src = "./images/arrow_left.svg";
+          teamRightActivImg.style.transform = "rotate(" + 360 + "deg)";
+        teamProgresBar.style.width = "100%";
+      }
+       
+        teamSliderContainer.style.marginLeft = teamOffset + "px";
+      }
+    }else if (window.innerWidth <= 576) {
+      teamProgresBar.style.width = "10%";
+      if (teamOffset !== 0) {
+        teamOffset += 215;
+      
+        if (teamOffset === 0) {
+         
+            teamLeftActivImg.src = "./images/arrow_left.svg";
+            teamLeftActivImg.style.transform = "rotate(" + 360 + "deg)";
+          teamProgresBar.style.width = "10%";
+        }
+        if (teamOffset === -215) {
+            teamProgresBar.style.width = "20%";
+        }
+        if (teamOffset === -430) {
+          teamProgresBar.style.width = "30%";
+        }
+        if (teamOffset === -645) {
+        teamProgresBar.style.width = "40%";
+      }
+        if (teamOffset === -860) {
+        teamProgresBar.style.width = "50%";
+      }
+        if (teamOffset === -1075) {
+        teamProgresBar.style.width = "60%";
+      }
+        if (teamOffset === -1290) {
+        teamProgresBar.style.width = "70%";
+      }
+        if (teamOffset === -1505) {
+        teamProgresBar.style.width = "80%";
+      }
+        if (teamOffset === -1720) {
+        teamProgresBar.style.width = "90%";
+      }
+        if (teamOffset === -1935) {
+        teamProgresBar.style.width = "100%";
+      }
        
         teamSliderContainer.style.marginLeft = teamOffset + "px";
       }
@@ -766,3 +1061,36 @@ function print(textPrint, textPrintSecond) {
 
   addPrint();
 }
+
+// Появление меню
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.querySelector('.header__right_mobil_close button');
+  const menuActive = document.querySelector('.menu_mobil');
+  const munuClose = document.querySelector('.header__right_mobil_open')
+  const wrapper = document.querySelector('.wrapper')
+
+  menuBtn.addEventListener('click', () => {
+    menuActive.classList.add('active');
+    wrapper.classList.add('active');
+
+  });
+  munuClose.addEventListener('click', ()=>{
+    menuActive.classList.remove('active');
+    wrapper.classList.remove('active');
+  })
+
+  console.log(menuBtn)
+  console.log(menuActive)
+});
+
+
+
+
+
+
+
+
+
+
+
+
