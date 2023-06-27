@@ -1210,7 +1210,7 @@ a{
     z-index: 20;
     visibility: hidden;
     transition: 0.2s all ease-in-out;
-    
+    display: none;
 }
 .menu_mobil.active{
     right: 0;
