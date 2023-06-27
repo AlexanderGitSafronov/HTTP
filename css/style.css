@@ -5,12 +5,15 @@
     box-sizing: border-box;
     color: #FFFFFF;
 }
+html{
+    overflow-x: hidden !important;
+}
 body{
     background-color: #000000;
     cursor: url('../images/cursor.svg'), auto;
     scroll-behavior: smooth;
     width: 100vw;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 h3 {
     font-size: 64px;
@@ -22,7 +25,7 @@ a{
 }
 .wrapper {
     position: relative;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
    
    width: 100vw;
    
