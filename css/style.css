@@ -5,13 +5,15 @@
     box-sizing: border-box;
     color: #FFFFFF;
 }
-
+html{
+    overflow-x: hidden;
+}
 body{
     background-color: #000000;
     cursor: url('../images/cursor.svg'), auto;
     scroll-behavior: smooth;
     width: 100vw;
-  
+    overflow-x: hidden;
 }
 h3 {
     font-size: 64px;
