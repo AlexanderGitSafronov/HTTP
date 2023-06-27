@@ -21,6 +21,7 @@ a{
 .wrapper {
     position: relative;
     overflow: hidden;
+   width: 100vw;
    
     /* background-image: url('../images/596628cdefe7ebdd0f69b37089e7ab51.png');
     background-repeat: no-repeat;

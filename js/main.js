@@ -278,7 +278,7 @@ function rightSwipe() {
       rightActivImg.style.transform = "rotate(" + 180 + "deg)";
       progresBar.style.width = "100%";
     }
-  }else if (window.innerWidth <= 576) {
+  }else if (window.innerWidth <= 576 && window.innerWidth > 380) {
     if (offset === 0) {
       offset += -335;
 
@@ -318,6 +318,57 @@ function rightSwipe() {
       progresBar.style.width = "100%";
     } else if (offset === -1005) {
       offset += -335;
+      sliderContainer.style.marginLeft = offset + "px";
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 3) {
+          item.classList.add("active__slide");
+        }
+      });
+      rightActivImg.src = "./images/arrow_left.svg";
+      rightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      progresBar.style.width = "100%";
+    }
+  }else if (window.innerWidth <= 380) {
+    if (offset === 0) {
+      offset += -300;
+
+      sliderContainer.style.marginLeft = offset + "px";
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 1) {
+          item.classList.add("active__slide");
+        }
+      });
+      leftActivImg.src = "./images/arrow_right.svg";
+      leftActivImg.style.transform = "rotate(" + 180 + "deg)";
+      progresBar.style.width = "50%";
+    } else if (offset === -300) {
+      offset += -300;
+      sliderContainer.style.marginLeft = offset + "px";
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 2) {
+          item.classList.add("active__slide");
+        }
+      });
+      progresBar.style.width = "75%";
+      leftActivImg.src = "./images/arrow_right.svg";
+      leftActivImg.style.transform = "rotate(" + 180 + "deg)";
+    } else if (offset === -600) {
+      offset += -300;
+      sliderContainer.style.marginLeft = offset + "px";
+      slideItem.forEach((item, idx) => {
+        item.classList.remove("active__slide");
+        if (idx === 3) {
+          item.classList.add("active__slide");
+        }
+      });
+      rightActivImg.src = "./images/arrow_left.svg";
+      rightActivImg.style.transform = "rotate(" + 180 + "deg)";
+      progresBar.style.width = "100%";
+    } else if (offset === -900) {
+      offset += -300;
       sliderContainer.style.marginLeft = offset + "px";
       slideItem.forEach((item, idx) => {
         item.classList.remove("active__slide");
@@ -517,7 +568,7 @@ function leftSwipe() {
       }
       sliderContainer.style.marginLeft = offset + "px";
     }
-  }else if (window.innerWidth <= 576) {
+  }else if (window.innerWidth <= 576 && window.innerWidth > 380) {
     if (offset !== 0) {
       offset += 335;
     
@@ -553,6 +604,53 @@ function leftSwipe() {
         progresBar.style.width = "75%";
       }
       if (offset === -1005) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 3) {
+            item.classList.add("active__slide");
+          }
+        });
+        progresBar.style.width = "100%";
+      }
+      sliderContainer.style.marginLeft = offset + "px";
+    }
+  }
+  else if (window.innerWidth <= 380) {
+    if (offset !== 0) {
+      offset += 300;
+    
+      if (offset === 0) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 0) {
+            item.classList.add("active__slide");
+          }
+        });
+        leftActivImg.src = "./images/arrow_left.svg";
+        leftActivImg.style.transform = "rotate(" + 360 + "deg)";
+        progresBar.style.width = "25%";
+      }
+      if (offset === -300) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 1) {
+            item.classList.add("active__slide");
+          }
+        });
+        progresBar.style.width = "50%";
+      }
+      if (offset === -660) {
+        slideItem.forEach((item, idx) => {
+          item.classList.remove("active__slide");
+          if (idx === 2) {
+            item.classList.add("active__slide");
+          }
+        });
+        rightActivImg.src = "./images/arrow_right.svg";
+        rightActivImg.style.transform = "rotate(" + 360 + "deg)";
+        progresBar.style.width = "75%";
+      }
+      if (offset === -900) {
         slideItem.forEach((item, idx) => {
           item.classList.remove("active__slide");
           if (idx === 3) {
