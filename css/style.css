@@ -10,6 +10,7 @@ body{
     cursor: url('../images/cursor.svg'), auto;
     scroll-behavior: smooth;
     width: 100vw;
+    overflow-x: hidden;
 }
 h3 {
     font-size: 64px;
@@ -21,8 +22,10 @@ a{
 }
 .wrapper {
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+   
    width: 100vw;
+   
    
     /* background-image: url('../images/596628cdefe7ebdd0f69b37089e7ab51.png');
     background-repeat: no-repeat;
