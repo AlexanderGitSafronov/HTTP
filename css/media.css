@@ -154,6 +154,11 @@
 
 }
 @media (max-width: 992px) {
+    .header__right_mobil_close,
+    .header__right_mobil_open{
+        height: 30px;
+        margin-top: 15px;
+    }
     .menu_mobil {
         display: block;
     }

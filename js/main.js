@@ -1162,7 +1162,7 @@ function print(textPrint, textPrintSecond) {
 
 // Появление меню
 document.addEventListener('DOMContentLoaded', function() {
-  const menuBtn = document.querySelector('.header__right_mobil_close button');
+  const menuBtn = document.querySelector('.header__right_mobil_close');
   const menuActive = document.querySelector('.menu_mobil');
   const munuClose = document.querySelector('.header__right_mobil_open')
   const wrapper = document.querySelector('.wrapper')
