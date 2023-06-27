@@ -239,7 +239,7 @@ function rightSwipe() {
       rightActivImg.style.transform = "rotate(" + 180 + "deg)";
       progresBar.style.width = "100%";
     }
-  } else if (window.innerWidth <= 992 && window.innerWidth >= 768) {
+  } else if (window.innerWidth <= 992 && window.innerWidth > 576) {
     if (offset === 0) {
       offset += -664;
 
@@ -471,7 +471,7 @@ function leftSwipe() {
       }
       sliderContainer.style.marginLeft = offset + "px";
     }
-  }else if (window.innerWidth <= 992 && window.innerWidth >= 768) {
+  }else if (window.innerWidth <= 992 && window.innerWidth > 576) {
     if (offset !== 0) {
       offset += 664;
     
@@ -689,7 +689,7 @@ teamRightBtn.addEventListener("click", () => {
         teamRightActivImg.src = "./images/arrow_left.svg";
         teamRightActivImg.style.transform = "rotate(" + 180 + "deg)";
       } 
-    } else if (window.innerWidth <= 992 && window.innerWidth >= 768) {
+    } else if (window.innerWidth <= 992 && window.innerWidth > 576) {
       if (teamOffset === 0) {
         teamProgresBar.style.width = "25%";
         teamOffset += -664;
@@ -853,7 +853,7 @@ teamRightBtn.addEventListener("click", () => {
        
         teamSliderContainer.style.marginLeft = teamOffset + "px";
       }
-    } else if (window.innerWidth <= 1200 && window.innerWidth > 992) {
+    } else if (window.innerWidth <= 1200 && window.innerWidth > 576) {
       if (teamOffset !== 0) {
         teamOffset += 664;
         console.log(teamOffset);
