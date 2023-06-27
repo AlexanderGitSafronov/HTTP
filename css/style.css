@@ -1216,7 +1216,7 @@ a{
 }
 .menu_mobil.active{
     right: 0;
- 
+    visibility: visible;
 }
 .header__right_mobil_open button{
     background-color: #FF445E;
