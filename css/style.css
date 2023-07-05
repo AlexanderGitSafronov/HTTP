@@ -336,21 +336,21 @@ a{
     
 }
 .carousel {
-    position: absolute;
+    position: relative;
     top: 200px;
     width: 100vw;
     left: -175px;
     display: flex;
     column-gap: 50px;
-    overflow-x: scroll;
+    overflow-x: auto;
     padding: 0px 300px;
-    -ms-overflow-style: none;  /* IE 10+ */
-    scrollbar-width: none; /* Firefox */
-
+    z-index: 100;
+    -ms-overflow-style: none; /* Удаление полосы прокрутки в IE и Edge */
+    scrollbar-width: none; /* Удаление полосы прокрутки в Firefox */
 }
+
 .carousel::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    display: none; /* Удаление полосы прокрутки в WebKit-браузерах */
 }
 
 /*ПРИНЦЫПЫ РАБОТЫ */
@@ -397,6 +397,9 @@ a{
 }
 .description__left_bottom {
     margin-left: 30px;
+}
+.prozor {
+    margin-left: 78px;
 }
 .work__principles_description h5 {
     font-size: 20px;
@@ -739,7 +742,7 @@ a{
     margin-left: 190px;
 }
 .team__slider .progress {
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 .team__slider .slider .card {
     width: 200px;
@@ -896,7 +899,10 @@ a{
 } 
 .marketing__carusel_block {
     min-width: 312px;
-  
+    cursor: pointer;
+}
+.marketing__carusel_block:hover a{
+    color: #FF445E;
 }
 .marketing__carusel_block-img {
     background-color: #000;
@@ -919,10 +925,7 @@ a{
     text-transform: uppercase;
     margin-top: 12px;
 }
-.marketing__carusel_block a:hover {
-  
-    color: #FF445E;
-}
+
 .marketing__bg {
     width: 100vw;
     position: absolute;
@@ -1128,6 +1131,7 @@ a{
     display: flex;
     flex-direction: column;
     row-gap: 6px;
+    width: 30%;
 }
 .footer__bottom_right a {
     color: rgba(255, 255, 255, 0.5);

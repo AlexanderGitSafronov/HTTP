@@ -104,7 +104,6 @@ function handleTouchMove(event) {
   if (Math.abs(xDiff) > Math.abs(yDiff)) {
     if (xDiff > 0) {
       console.log("right");
-
       leftSwipe();
     } else {
       console.log("left");
