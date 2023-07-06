@@ -533,6 +533,7 @@ a{
     column-gap: 25px;
     transition: 1s all ease-in-out;
     position: absolute;
+    cursor: pointer;
 }
 .slider .slider__item {
     padding: 24px 25px 34px 36px;

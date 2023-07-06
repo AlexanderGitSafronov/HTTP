@@ -1,3 +1,32 @@
+// Первая каруселька
+// const carousel = document.querySelector('.carousel');
+// let isMouseDown = false;
+// let startX;
+// let scrollLeft;
+
+// carousel.addEventListener('mousedown', (e) => {
+//   isMouseDown = true;
+//   startX = e.pageX - carousel.offsetLeft;
+//   scrollLeft = carousel.scrollLeft;
+// });
+
+// carousel.addEventListener('mouseleave', () => {
+//   isMouseDown = false;
+// });
+
+// carousel.addEventListener('mouseup', () => {
+//   isMouseDown = false;
+// });
+
+// carousel.addEventListener('mousemove', (e) => {
+//   if (!isMouseDown) return;
+//   e.preventDefault();
+//   const x = e.pageX - carousel.offsetLeft;
+//   const walk = (x - startX) * 2; // Множитель для более плавного свайпа
+
+//   carousel.scrollLeft = scrollLeft - walk;
+// });
+
 
 
 
@@ -72,10 +101,11 @@ const progresBar = document.querySelector(".progress .progress_active");
 sliderContainer.addEventListener("touchstart", handleTouchStart, false);
 sliderContainer.addEventListener("touchmove", handleTouchMove, false);
 
+
+
 let x1 = null;
 let y1 = null;
 let offset = 0;
-
 
 
 sliderRightBtn.addEventListener("click", () => {
@@ -119,6 +149,59 @@ function handleTouchMove(event) {
   x1 = null;
   y1 = null;
 }
+
+function firstPCswipe(){
+  // Работающий слайдер
+
+let isDragging = false;
+let startPos = null;
+let sensitivity = 10; // Чувствительность свайпа
+
+sliderContainer.addEventListener("mousedown", (event) => {
+  isDragging = true;
+  startPos = event.clientX;
+});
+
+sliderContainer.addEventListener("mousemove", (event) => {
+  if (isDragging) {
+    const currentPos = event.clientX;
+    const difference = currentPos - startPos;
+    
+    if (Math.abs(difference) >= sensitivity) {
+      if (difference > 0) {
+        console.log("right");
+        leftSwipe();
+      } else {
+        console.log("left");
+        rightSwipe();
+      }
+      
+      isDragging = false;
+      startPos = null;
+    }
+  }
+});
+
+sliderContainer.addEventListener("mouseup", () => {
+  isDragging = false;
+  startPos = null;
+});
+}
+firstPCswipe()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function rightSwipe() {
   if (window.innerWidth > 1400) {
@@ -731,6 +814,45 @@ teamRightBtn.addEventListener("click", () => {
     teamX1 = null;
     teamY1 = null;
   }
+
+  function pcSwipe(){
+    let isDragging = false;
+let startPos = null;
+let sensitivity = 10; // Чувствительность свайпа
+
+teamSliderContainer.addEventListener("mousedown", (event) => {
+  isDragging = true;
+  startPos = event.clientX;
+});
+
+teamSliderContainer.addEventListener("mousemove", (event) => {
+  if (isDragging) {
+    const currentPos = event.clientX;
+    const difference = currentPos - startPos;
+    
+    if (Math.abs(difference) >= sensitivity) {
+      if (difference > 0) {
+        console.log("right");
+        teamLeftSwipe();
+      } else {
+        console.log("left");
+        teamRightSwipe();
+      }
+      
+      isDragging = false;
+      startPos = null;
+    }
+  }
+});
+
+teamSliderContainer.addEventListener("mouseup", () => {
+  isDragging = false;
+  startPos = null;
+});
+  }
+
+  pcSwipe()
+
 
 
   function teamRightSwipe() {
