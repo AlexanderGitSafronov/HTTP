@@ -154,10 +154,14 @@ a{
 }
 .main__rooster {
     position: absolute;
-    top: -178px;
+    top: -113px;
     right: 0px;
-    animation: roosterTopBottom 20s ease-in-out infinite;
+    /* animation: roosterTopBottom 20s ease-in-out infinite; */
 }
+.main__rooster img{
+    width: 80%;
+}
+
 
 @keyframes arrowTopBottom{
     0%{
