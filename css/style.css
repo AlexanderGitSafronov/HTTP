@@ -340,21 +340,22 @@ a{
     
 }
 .carousel {
-    position: relative;
-    top: 200px;
-    width: 100vw;
-    left: -175px;
+    position: absolute;
+    top: 100px;
+    width: 120vw;
+    left: -475px;
     display: flex;
     column-gap: 50px;
-    overflow-x: auto;
-    padding: 0px 300px;
+    /* overflow-x: auto; */
+    /* padding: 0px 300px; */
     z-index: 100;
     -ms-overflow-style: none; /* Удаление полосы прокрутки в IE и Edge */
     scrollbar-width: none; /* Удаление полосы прокрутки в Firefox */
+    
 }
 
-.carousel::-webkit-scrollbar {
-    display: none; /* Удаление полосы прокрутки в WebKit-браузерах */
+.trust h3 {
+    padding-right: 110px;
 }
 
 /*ПРИНЦЫПЫ РАБОТЫ */

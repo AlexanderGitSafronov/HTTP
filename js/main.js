@@ -28,6 +28,46 @@
 // });
 
 
+$(document).ready(function() {
+  $('.carousel').slick({
+    infinite: true,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    cssEase: 'linear',
+    arrows: false,
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 1441,
+        settings: {
+          slidesToShow: 6
+        }
+      },
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      
+    ]
+  });
+});
 
 
 // СТРЕЛОЧКИ НА КНОПКЕ СУЖАЮТСЯ
